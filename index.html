@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            border: none;
+            font-family: "Press Start 2P", cursive;
+        }
+
+        .login-form {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        .login-header {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 40px;
+            gap: 8px;
+        }
+
+        .login-header img{
+            width: 100px;
+        }
+
+        .login-header h1{
+            color: #333;
+        }
+
+        .login-header h2{
+            color: #333;
+            font-size: 0.8em;
+            margin-top: 0;
+        }
+
+        .login-input {
+            border: 2px solid #333;
+            border-radius: 8px;
+            color: #333;
+            font-size: 1em;
+            margin-bottom: 15px;
+            max-width: 300px;
+            outline: none;
+            padding: 15px;
+            width: 100%;
+        }
+
+        .login-button {
+            background-color: rgb(194, 36, 8);
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .login-button:disabled {
+            background-color: #eee;
+            color: #aaa;
+            cursor: auto;
+        }
+        
+        .selecao-personagem {
+            display: flex;
+            position: relative;
+        }
+        .selecao-personagem button {
+            position: absolulte;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            align-items: center;
+            margin-top: 150px;
+            background-color: white;
+            color: rgb(165, 156, 156);
+        }
+
+        .selecao-personagem button:hover {
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <form class="login-form">
+
+        <div class="login-header">
+            <img src="logo.png" alt="logosociedadeweb">
+            <h1>Sociedade Web</h1>
+            <h2>Escolha seu peronsagem</h2>
+        </div>
+        <div class="selecao-personagem">
+            <button onclick="trocar()"" style="font-size: 80px; display: flex; justify-content: center; align-items: center; text-align: center"><</button>
+            <img id="personagem" src="feminino1.png" alt="personagem" style="width: 300px;">
+            <button onclick="trocar()" style="font-size: 80px; display: flex; justify-content: center; align-items: center; text-align: center;">></button>
+        </div>
+
+        <input type="text" placeholder="Name" class="login-input">
+        <button type="submit" class="login-button" disabled>Jogar</button>
+
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
